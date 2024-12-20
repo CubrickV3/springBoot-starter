@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.cibrick.springBoot_hibernate_mvc.dao.UserDao;
 import ru.cibrick.springBoot_hibernate_mvc.models.User;
 
-
 import java.util.List;
 
 @Service

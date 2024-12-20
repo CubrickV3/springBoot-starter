@@ -1,13 +1,11 @@
 package ru.cibrick.springBoot_hibernate_mvc.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.cibrick.springBoot_hibernate_mvc.models.User;
 import ru.cibrick.springBoot_hibernate_mvc.service.UserService;
-
 
 import java.util.List;
 
@@ -35,6 +33,7 @@ public class UserController {
         model.addAttribute("user", user);
         return "users/new_user";
     }
+
     @PostMapping
     public String newUser(@ModelAttribute("user") User user) {
         userService.persist(user);
@@ -46,6 +45,7 @@ public class UserController {
         model.addAttribute("user", userService.findById(id));
         return "users/edit_user";
     }
+
     @PatchMapping("/{id}")
     public String editUser(@ModelAttribute("user") User user, @PathVariable Long id) {
         userService.update(id, user);

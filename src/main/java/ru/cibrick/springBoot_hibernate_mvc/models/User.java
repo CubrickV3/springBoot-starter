@@ -1,11 +1,9 @@
 package ru.cibrick.springBoot_hibernate_mvc.models;
 
 import jakarta.persistence.*;
-import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
-@Component
 @Entity
 @Table(name = "users")
 public class User {
